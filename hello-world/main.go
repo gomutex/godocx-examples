@@ -24,6 +24,7 @@ func main() {
 	// Using Run
 	r := p.AddText("Hello, Parallel World")
 	r.Color("bc00d6")
+	r.Size(18)
 
 	err = docx.SaveTo("hello-world.docx")
 	if err != nil {
