@@ -26,6 +26,14 @@ func main() {
 	r.Color("bc00d6")
 	r.Size(18)
 
+	p1 := docx.AddParagraph("Intense Quote")
+	p1.Style("IntenseQuote")
+
+	p = docx.AddParagraph("A plain paragraph having some ")
+	p.AddText("bold").Bold(true)
+	p.AddText(" and some ")
+	p.AddText("italic.").Italic(true)
+
 	err = docx.SaveTo("hello-world.docx")
 	if err != nil {
 		log.Fatal(err)
