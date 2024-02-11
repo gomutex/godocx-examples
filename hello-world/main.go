@@ -34,6 +34,12 @@ func main() {
 	p.AddText(" and some ")
 	p.AddText("italic.").Italic(true)
 
+	bulletPara := docx.AddParagraph("first item in unordered list")
+	bulletPara.Style("List Bullet")
+
+	numberPara := docx.AddParagraph("first item in ordered list")
+	numberPara.Style("List Number")
+
 	err = docx.SaveTo("hello-world.docx")
 	if err != nil {
 		log.Fatal(err)
