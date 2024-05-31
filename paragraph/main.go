@@ -30,6 +30,9 @@ func main() {
 	docx.AddEmptyParagraph().AddText("Highlight").Highlight(elements.ColorIndexBlue)
 	docx.AddEmptyParagraph().AddText("Shading").Shading(elements.ShadingTypeSolid, "auto", "FF00A0")
 
+	jp1 := docx.AddParagraph("Center Justified")
+	jp1.Justification("center")
+
 	err = docx.SaveTo("paragraph.docx")
 	if err != nil {
 		log.Fatal(err)
