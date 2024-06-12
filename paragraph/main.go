@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gomutex/godocx"
-	"github.com/gomutex/godocx/oxml/elements"
+	"github.com/gomutex/godocx/ooxml/wml"
 )
 
 func main() {
@@ -26,9 +26,9 @@ func main() {
 	r1.Bold(true)
 
 	docx.AddEmptyParagraph().AddText("Strike").Strike(true)
-	docx.AddEmptyParagraph().AddText("Underline").Underline(elements.UnderlineSingle)
-	docx.AddEmptyParagraph().AddText("Highlight").Highlight(elements.ColorIndexBlue)
-	docx.AddEmptyParagraph().AddText("Shading").Shading(elements.ShadingTypeSolid, "auto", "FF00A0")
+	docx.AddEmptyParagraph().AddText("Underline").Underline(wml.UnderlineSingle)
+	docx.AddEmptyParagraph().AddText("Highlight").Highlight(wml.ColorIndexBlue)
+	docx.AddEmptyParagraph().AddText("Shading").Shading(wml.ShadingTypeSolid, "auto", "FF00A0")
 
 	jp1 := docx.AddParagraph("Center Justified")
 	jp1.Justification("center")
