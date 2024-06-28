@@ -8,14 +8,14 @@ import (
 )
 
 func main() {
-	docx, err := godocx.NewDocument()
+	document, err := godocx.NewDocument()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	docx.AddPicture("gopher.png", units.Inch(2.9), units.Inch(2.9))
+	document.AddPicture("gopher.png", units.Inch(2.9), units.Inch(2.9))
 
-	err = docx.SaveTo("pic.docx")
+	err = document.SaveTo("pic.docx")
 	if err != nil {
 		log.Fatal(err)
 	}

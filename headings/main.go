@@ -7,19 +7,19 @@ import (
 )
 
 func main() {
-	docx, err := godocx.NewDocument()
+	document, err := godocx.NewDocument()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Simple addition of heading text
-	docx.AddHeading("Title", 0)
-	docx.AddHeading("Heading 1", 1)
-	docx.AddHeading("Heading 2", 2)
-	docx.AddHeading("Heading 3", 3)
-	docx.AddHeading("Heading 4", 4)
+	document.AddHeading("Title", 0)
+	document.AddHeading("Heading 1", 1)
+	document.AddHeading("Heading 2", 2)
+	document.AddHeading("Heading 3", 3)
+	document.AddHeading("Heading 4", 4)
 
-	err = docx.SaveTo("headings.docx")
+	err = document.SaveTo("headings.docx")
 	if err != nil {
 		log.Fatal(err)
 	}

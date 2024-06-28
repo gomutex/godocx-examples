@@ -7,13 +7,13 @@ import (
 )
 
 func main() {
-	docx, err := godocx.NewDocument()
+	document, err := godocx.NewDocument()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	table := docx.AddTable()
-	// Predefined style in the docx template
+	table := document.AddTable()
+	// Predefined style in the document template
 	table.Style("LightList-Accent2")
 
 	tblRow := table.AddRow()
@@ -29,7 +29,7 @@ func main() {
 	cell11 := tblRow1.AddCell()
 	cell11.AddParagraph("Row2 - Column 2")
 
-	err = docx.SaveTo("table.docx")
+	err = document.SaveTo("table.docx")
 	if err != nil {
 		log.Fatal(err)
 	}
