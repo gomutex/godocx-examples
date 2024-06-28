@@ -40,6 +40,26 @@ func main() {
 	numberPara := document.AddParagraph("first item in ordered list")
 	numberPara.Style("List Number")
 
+	records := []struct{ Qty, ID, Desc string }{{"5", "A001", "Laptop"}, {"10", "B202", "Smartphone"}, {"2", "E505", "Smartwatch"}}
+
+	document.AddPageBreak()
+
+	// Table will be in the new Page
+
+	table := document.AddTable()
+	table.Style("LightList-Accent4")
+	hdrRow := table.AddRow()
+	hdrRow.AddCell().AddParagraph("Qty")
+	hdrRow.AddCell().AddParagraph("ID")
+	hdrRow.AddCell().AddParagraph("Description")
+
+	for _, record := range records {
+		row := table.AddRow()
+		row.AddCell().AddParagraph(record.Qty)
+		row.AddCell().AddParagraph(record.ID)
+		row.AddCell().AddParagraph(record.Desc)
+	}
+
 	err = document.SaveTo("hello-world.docx")
 	if err != nil {
 		log.Fatal(err)
