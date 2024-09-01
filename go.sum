@@ -1,2 +1,6 @@
 github.com/gomutex/godocx v0.1.3 h1:9nJokOZ8IAuqFFMt9+ohK4PHKsidioxEOkYfw1CTqU0=
 github.com/gomutex/godocx v0.1.3/go.mod h1:hBG/f+z7COKeQTp5WwLpQAj5EOuXzlDPsLoKM7lYaKs=
+github.com/gomutex/godocx v0.1.4 h1:7QLSKfIE5DRuGKlH8EdlpfwSJRj7rDegzg5hfwzW+2s=
+github.com/gomutex/godocx v0.1.4/go.mod h1:x2x+ZanJAhhG0vxU0nvW1WomfWD+qSB6tcMpP4shP50=
+github.com/gomutex/godocx v0.1.5 h1:jAqGmlGnvid1GmrgJulYx/yPnrlr2jzA5LGpOy7Z6AM=
+github.com/gomutex/godocx v0.1.5/go.mod h1:x2x+ZanJAhhG0vxU0nvW1WomfWD+qSB6tcMpP4shP50=
